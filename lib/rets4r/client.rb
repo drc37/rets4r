@@ -369,6 +369,7 @@ module RETS4R
 
       # TODO: make parser configurable
       results = RETS4R::Client::CompactNokogiriParser.new(response.body)
+      ap results
       meta_hash = Hash.from_xml(results.to_s)
       ap meta_hash
       if block_given?
