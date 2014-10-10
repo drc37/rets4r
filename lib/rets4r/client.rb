@@ -364,7 +364,9 @@ module RETS4R
       # that happens, though...
       #++
       options.each { |k,v| data[k] = v.to_s } if options
-
+      ap @urls.search
+      ap data
+      ap header
       response = request(@urls.search, data, header)
 
       # TODO: make parser configurable
